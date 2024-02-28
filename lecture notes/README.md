@@ -18,3 +18,11 @@ Translation is an affine transformation 仿射变换 (unlike linear transformati
 • Gives uniform representation of transformations    
 • Simplifies graphics algorithms, systems (e.g., GPUs & APIs)  
 ![](README_files/2.jpg)
+
+$$
+ \begin{bmatrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+  \end{bmatrix} \tag{4}
+$$
