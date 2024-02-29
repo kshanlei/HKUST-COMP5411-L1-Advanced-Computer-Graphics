@@ -1,0 +1,146 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-7f034cd2b420eb75cbd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4
+					]
+				},
+				{
+					"build" : "ext_build/glfw",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-ext_build.glfw-Debug-dd5f9c259c97169ebfab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "ext/glfw"
+				},
+				{
+					"build" : "ext_build/glfw/src",
+					"jsonFile" : "directory-ext_build.glfw.src-Debug-10027a41950b2bfcf99d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "ext/glfw/src",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "COMP5411Project",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "COMP5411::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-COMP5411-Debug-2c31b193b68053a62910.json",
+					"name" : "COMP5411",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@2313550c3481759bc573",
+					"jsonFile" : "target-glfw-Debug-1d8766e85dc1ecfa3126.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw_objects::@2313550c3481759bc573",
+					"jsonFile" : "target-glfw_objects-Debug-a783145b48f46ed83f04.json",
+					"name" : "glfw_objects",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nanogui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nanogui-Debug-b58d764bcda85bc53234.json",
+					"name" : "nanogui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nanogui-obj::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nanogui-obj-Debug-330e4f3f3f63e0484706.json",
+					"name" : "nanogui-obj",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build",
+		"source" : "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -17,12 +17,35 @@ Translation is an affine transformation 仿射变换 (unlike linear transformati
 • Product of many matrices is a single matrix 多个矩阵的乘法可以变成一个单一的矩阵，而且是一个固定维度的矩阵  
 • Gives uniform representation of transformations    
 • Simplifies graphics algorithms, systems (e.g., GPUs & APIs)  
-![](README_files/2.jpg)
+![](README_files/2.jpg)  
 
-$$
- \begin{bmatrix}
-   1 & 2 & 3 \\
-   4 & 5 & 6 \\
-   7 & 8 & 9
-  \end{bmatrix} \tag{4}
-$$
+Rotation will map standard basis to orthonormal basis 旋转将标准基础映射到正交基础  
+![](README_files/4.jpg)  
+ 一些问题  
+ Q1: Does every matrix QTQ = I describe a rotation?  
+ Remember that rotations must preserve the origin, preserve distances, and preserve orientation  
+ Q2: Consider for instance this matrix， does this matrix represent a rotation?
+![](README_files/3.jpg)
+ (lf not, which invariant does it fail to preserve?)
+ A: No! It represents a reflection 反射 across the y-axis  (and hence fails to preserve orientation)
+x轴反射，y轴反射 a reflection across the x-axis
+![](README_files/6.jpg)
+
+transformation consists of 3 case: translation, Rotation -“spin", “twist", or "turn"
+, reflection
+![](README_files/5.jpg)
+Some of our transformations preserve orientation and some do not. Can you guess which one(s) do?  
+translation and rotation can preserve the orientation but the reflection  can not preserve the orientation
+![](README_files/7.jpg)
+## what is shearing?
+Shearing: It is used to slant the object in3D Plane either in x, y, or in the z-direction. It changes the shape of the object.
+![](README_files/9.jpg)
+![](README_files/8.jpg)
+![](README_files/10.jpg)
+![](README_files/11.jpg)
+![](README_files/12.jpg)
+![](README_files/13.jpg)
+![](README_files/14.jpg)
+![](README_files/15.jpg)
+![](README_files/16.jpg)
+![](README_files/17.jpg)
