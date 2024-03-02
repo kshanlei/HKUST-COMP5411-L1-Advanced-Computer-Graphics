@@ -17,7 +17,7 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /usr/bin/clang 
+      Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
       Build flags: 
       Id flags:  
       
@@ -39,7 +39,7 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/bin/clang++ 
+      Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
       Build flags: 
       Id flags:  
       
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_OSX_ARCHITECTURES: ""
@@ -72,16 +72,16 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_81007
-        [1/2] /usr/bin/clang   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_17d96
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 12.0.0 (clang-1200.0.32.29)
         Target: x86_64-apple-darwin19.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62 -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20 -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 12.0.0 (clang-1200.0.32.29) default target x86_64-apple-darwin19.6.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"
@@ -92,12 +92,12 @@ events:
          /Library/Developer/CommandLineTools/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -o cmTC_81007   && :
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/cc -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -o cmTC_17d96   && :
         Apple clang version 12.0.0 (clang-1200.0.32.29)
         Target: x86_64-apple-darwin19.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_81007 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_17d96 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-609.8
         BUILD 15:07:46 Dec 18 2020
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -136,16 +136,16 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62']
+        ignore line: [Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_81007]
-        ignore line: [[1/2] /usr/bin/clang   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_17d96]
+        ignore line: [[1/2] /Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.29)]
         ignore line: [Target: x86_64-apple-darwin19.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-9zYF62 -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WgoB20 -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 12.0.0 (clang-1200.0.32.29) default target x86_64-apple-darwin19.6.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"]
@@ -156,12 +156,12 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -o cmTC_81007   && :]
+        ignore line: [[2/2] : && /Library/Developer/CommandLineTools/usr/bin/cc -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -o cmTC_17d96   && :]
         ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.29)]
         ignore line: [Target: x86_64-apple-darwin19.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_81007 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_17d96 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
           arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -176,11 +176,11 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_81007] ==> ignore
+          arg [cmTC_17d96] ==> ignore
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_81007.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_17d96.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
         Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
@@ -204,8 +204,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_OSX_ARCHITECTURES: ""
@@ -215,17 +215,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_93b7c
-        [1/2] /usr/bin/clang++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_1d9fd
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 12.0.0 (clang-1200.0.32.29)
         Target: x86_64-apple-darwin19.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/c++/v1"
-         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 12.0.0 (clang-1200.0.32.29) default target x86_64-apple-darwin19.6.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"
@@ -237,12 +237,12 @@ events:
          /Library/Developer/CommandLineTools/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /usr/bin/clang++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_93b7c   && :
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1d9fd   && :
         Apple clang version 12.0.0 (clang-1200.0.32.29)
         Target: x86_64-apple-darwin19.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_93b7c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_1d9fd -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-609.8
         BUILD 15:07:46 Dec 18 2020
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -283,17 +283,17 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD']
+        ignore line: [Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_93b7c]
-        ignore line: [[1/2] /usr/bin/clang++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/local/bin/ninja -v cmTC_1d9fd]
+        ignore line: [[1/2] /Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.29)]
         ignore line: [Target: x86_64-apple-darwin19.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/c++/v1"]
-        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-hGc3PD -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -dependency-file CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-IUYsUn -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-10.15.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 12.0.0 (clang-1200.0.32.29) default target x86_64-apple-darwin19.6.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"]
@@ -305,12 +305,12 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_93b7c   && :]
+        ignore line: [[2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1d9fd   && :]
         ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.29)]
         ignore line: [Target: x86_64-apple-darwin19.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_93b7c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_1d9fd -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
           arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -325,11 +325,11 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_93b7c] ==> ignore
+          arg [cmTC_1d9fd] ==> ignore
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_93b7c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_1d9fd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
@@ -356,8 +356,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-zf7bnz"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-zf7bnz"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-DojZWt"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-DojZWt"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wno-deprecated-declarations"
       CMAKE_MODULE_PATH: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/ext/glfw/CMake/modules"
@@ -368,11 +368,11 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-zf7bnz'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-DojZWt'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_b5bc9
-        [1/2] /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -Wno-deprecated-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_b5bc9.dir/src.c.o -MF CMakeFiles/cmTC_b5bc9.dir/src.c.o.d -o CMakeFiles/cmTC_b5bc9.dir/src.c.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-zf7bnz/src.c
-        [2/2] : && /usr/bin/clang -Wno-deprecated-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_b5bc9.dir/src.c.o -o cmTC_b5bc9   && :
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_7226e
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -Wno-deprecated-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_7226e.dir/src.c.o -MF CMakeFiles/cmTC_7226e.dir/src.c.o.d -o CMakeFiles/cmTC_7226e.dir/src.c.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-DojZWt/src.c
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/cc -Wno-deprecated-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_7226e.dir/src.c.o -o cmTC_7226e   && :
         
       exitCode: 0
   -
@@ -385,8 +385,8 @@ events:
     checks:
       - "Performing Test HAS_CPP14_FLAG"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-LY6Ghy"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-LY6Ghy"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-JEzASc"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-JEzASc"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -Wall -Wextra"
       CMAKE_OSX_ARCHITECTURES: ""
@@ -396,11 +396,11 @@ events:
       variable: "HAS_CPP14_FLAG"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-LY6Ghy'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-JEzASc'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_6e0b6
-        [1/2] /usr/bin/clang++ -DHAS_CPP14_FLAG  -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -std=c++14 -MD -MT CMakeFiles/cmTC_6e0b6.dir/src.cxx.o -MF CMakeFiles/cmTC_6e0b6.dir/src.cxx.o.d -o CMakeFiles/cmTC_6e0b6.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-LY6Ghy/src.cxx
-        [2/2] : && /usr/bin/clang++ -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_6e0b6.dir/src.cxx.o -o cmTC_6e0b6   && :
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_7d3ee
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/c++ -DHAS_CPP14_FLAG  -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -std=c++14 -MD -MT CMakeFiles/cmTC_7d3ee.dir/src.cxx.o -MF CMakeFiles/cmTC_7d3ee.dir/src.cxx.o.d -o CMakeFiles/cmTC_7d3ee.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-JEzASc/src.cxx
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_7d3ee.dir/src.cxx.o -o cmTC_7d3ee   && :
         
       exitCode: 0
   -
@@ -413,8 +413,8 @@ events:
     checks:
       - "Performing Test HAS_CPP11_FLAG"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7ZkQeI"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7ZkQeI"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-uqt3DO"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-uqt3DO"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -Wall -Wextra"
       CMAKE_OSX_ARCHITECTURES: ""
@@ -424,11 +424,11 @@ events:
       variable: "HAS_CPP11_FLAG"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7ZkQeI'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-uqt3DO'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_18917
-        [1/2] /usr/bin/clang++ -DHAS_CPP11_FLAG  -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -std=c++11 -MD -MT CMakeFiles/cmTC_18917.dir/src.cxx.o -MF CMakeFiles/cmTC_18917.dir/src.cxx.o.d -o CMakeFiles/cmTC_18917.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7ZkQeI/src.cxx
-        [2/2] : && /usr/bin/clang++ -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_18917.dir/src.cxx.o -o cmTC_18917   && :
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_2ed0a
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/c++ -DHAS_CPP11_FLAG  -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15   -std=c++11 -MD -MT CMakeFiles/cmTC_2ed0a.dir/src.cxx.o -MF CMakeFiles/cmTC_2ed0a.dir/src.cxx.o.d -o CMakeFiles/cmTC_2ed0a.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-uqt3DO/src.cxx
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_2ed0a.dir/src.cxx.o -o cmTC_2ed0a   && :
         
       exitCode: 0
   -
@@ -439,8 +439,8 @@ events:
       - "CMakeLists.txt:57 (check_cxx_source_runs)"
       - "CMakeLists.txt:171 (CHECK_CXX_COMPILER_AND_LINKER_FLAGS)"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -Wall -Wextra -std=c++14"
       CMAKE_OSX_ARCHITECTURES: ""
@@ -450,18 +450,18 @@ events:
       variable: "HAS_LIBCPP_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_13530
-        [1/2] /usr/bin/clang++ -DHAS_LIBCPP  -Wall -Wextra -std=c++14 -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_13530.dir/src.cxx.o -MF CMakeFiles/cmTC_13530.dir/src.cxx.o.d -o CMakeFiles/cmTC_13530.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU/src.cxx
-        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_3167a
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/c++ -DHAS_LIBCPP  -Wall -Wextra -std=c++14 -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_3167a.dir/src.cxx.o -MF CMakeFiles/cmTC_3167a.dir/src.cxx.o.d -o CMakeFiles/cmTC_3167a.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE/src.cxx
+        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
         int main(int argc, char **argv) { return 0; }
                      ^
-        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-WsPWlU/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
+        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-7299uE/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
         int main(int argc, char **argv) { return 0; }
                                   ^
         2 warnings generated.
-        [2/2] : && /usr/bin/clang++ -Wall -Wextra -std=c++14 -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_13530.dir/src.cxx.o -o cmTC_13530  -stdlib=libc++ && :
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -Wall -Wextra -std=c++14 -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_3167a.dir/src.cxx.o -o cmTC_3167a  -stdlib=libc++ && :
         
       exitCode: 0
     runResult:
@@ -478,8 +478,8 @@ events:
       - "CMakeLists.txt:57 (check_cxx_source_runs)"
       - "CMakeLists.txt:176 (CHECK_CXX_COMPILER_AND_LINKER_FLAGS)"
     directories:
-      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X"
-      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X"
+      source: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N"
+      binary: "/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -Wall -Wextra -std=c++14 -stdlib=libc++"
       CMAKE_OSX_ARCHITECTURES: ""
@@ -489,18 +489,18 @@ events:
       variable: "HAS_LIBCPPABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X'
+        Change Dir: '/Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N'
         
-        Run Build Command(s): /usr/local/bin/ninja -v cmTC_71a0a
-        [1/2] /usr/bin/clang++ -DHAS_LIBCPPABI  -Wall -Wextra -std=c++14 -stdlib=libc++ -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_71a0a.dir/src.cxx.o -MF CMakeFiles/cmTC_71a0a.dir/src.cxx.o.d -o CMakeFiles/cmTC_71a0a.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X/src.cxx
-        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
+        Run Build Command(s): /usr/local/bin/ninja -v cmTC_adf0a
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/c++ -DHAS_LIBCPPABI  -Wall -Wextra -std=c++14 -stdlib=libc++ -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_adf0a.dir/src.cxx.o -MF CMakeFiles/cmTC_adf0a.dir/src.cxx.o.d -o CMakeFiles/cmTC_adf0a.dir/src.cxx.o -c /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N/src.cxx
+        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
         int main(int argc, char **argv) { return 0; }
                      ^
-        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-exw86X/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
+        /Users/mac/wkdir/code/COMP5411-L1-Advanced-Computer-Graphics/assignment/assignment1/MeshViewer/build/CMakeFiles/CMakeScratch/TryCompile-FjKI9N/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
         int main(int argc, char **argv) { return 0; }
                                   ^
         2 warnings generated.
-        [2/2] : && /usr/bin/clang++ -Wall -Wextra -std=c++14 -stdlib=libc++ -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_71a0a.dir/src.cxx.o -o cmTC_71a0a  -stdlib=libc++ -lc++abi && :
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/c++ -Wall -Wextra -std=c++14 -stdlib=libc++ -stdlib=libc++ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_adf0a.dir/src.cxx.o -o cmTC_adf0a  -stdlib=libc++ -lc++abi && :
         
       exitCode: 0
     runResult:
