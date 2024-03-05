@@ -548,6 +548,28 @@ int Mesh::countBoundaryLoops() {
 	/* Helper function for Mesh::collectMeshStats()
 	/**********************************************/
 
+	std::vector< HEdge* > mBHEdgeListRemain(mBHEdgeList);
+	bool isTracing = false;
+	if (mBHEdgeListRemain.size()==0) { return 0; }
+	HEdge* curBHEdge = mBHEdgeListRemain.back();
+	while (!mBHEdgeListRemain.empty())
+	{
+		if (isTracing) {
+			curBHEdge = curBHEdge->next();
+			auto it = std::find(mBHEdgeListRemain.begin(), mBHEdgeListRemain.end(), curBHEdge);
+			if (it == mBHEdgeListRemain.end()) {
+				count++;
+				isTracing = false;
+			} else {
+				mBHEdgeListRemain.erase(it);
+			}
+
+		} else {
+			curBHEdge = mBHEdgeListRemain.back();
+			mBHEdgeListRemain.pop_back();
+			isTracing = true;
+		}
+	}
 	/*====== Programming Assignment 0 ======*/
 
 	return count;
@@ -567,6 +589,32 @@ int Mesh::countConnectedComponents() {
 	/* the mesh. (Hint: use a stack)
 	/**********************************************/
 
+	auto V = (int)mVertexList.size();
+	std::vector < bool > visited;
+	for(int i = 0; i < V; i++)
+		visited.push_back(false);
+	std::list< Vertex* > queue;
+	while (!std::all_of(std::begin(visited), std::end(visited), [](bool i) { return i; })) {
+		auto it = mVertexList.begin();
+		while (it != mVertexList.end() && visited[(*it)->index()]) { it++; };
+		visited[(*it)->index()] = true;
+		queue.push_back(*it);
+		while(!queue.empty()) {
+			Vertex* curVertex = queue.front();
+			queue.pop_front();
+			HEdge* firstHEdge = curVertex->halfEdge();
+			HEdge* curHEdge = firstHEdge;
+			do{
+				Vertex* nextVertex = curHEdge->end();
+				if (!visited[nextVertex->index()]) {
+					visited[nextVertex->index()] = true;
+					queue.push_back(nextVertex);
+				}
+				curHEdge = curHEdge->twin()->next();
+			} while (curHEdge != firstHEdge);
+		}
+		count++;
+	}
 	/*====== Programming Assignment 0 ======*/
 
 	return count;
@@ -586,7 +634,28 @@ void Mesh::computeVertexNormals() {
 	/**********************************************/
 
 	/*====== Programming Assignment 0 ======*/
+	for (auto it1=mVertexList.begin(); it1!=mVertexList.end(); it1++) {
+		Vertex* curVertex = *it1;
+		const Eigen::Vector3f& curPosition = curVertex->position();
+		Eigen::Vector3f curNorm(0,0,0);
+		std::vector < HEdge* > outHEdges;
+		outHEdges.push_back(curVertex->halfEdge());
+		while (outHEdges.back()->twin()->next()!=outHEdges[0]) {
+			outHEdges.push_back(outHEdges.back()->twin()->next());
+		}
+		for (auto it2=outHEdges.begin(); (it2+1)!=outHEdges.end(); it2++) {
+			Eigen::Vector3f dp1 = (*it2)->end()->position() - curPosition;
+			Eigen::Vector3f dp2 = curPosition - (*(it2+1))->end()->position();
+			Eigen::Vector3f cross = dp1.cross(dp2);
+			// Note no normalization here means weighted by area
+			curNorm += dp1.cross(dp2);
+		}
+		curNorm.normalize();
+		curVertex->setNormal(curNorm);
+	}
 	
+	// Notify mesh shaders
+	setVertexNormalDirty(true);
 	// Notify mesh shaders
 	setVertexNormalDirty(true);
 }
@@ -610,38 +679,31 @@ void Mesh::explicitSmooth(bool cotangentWeights) {
 		/**********************************************/
 		
 		// the idea of laplacian smooth is to build the laplacian matrix
-		int nv = mVertexList.size();
-		for(int i = 0; i < nv; i++) {
-			Vertex* curVertex = mVertexList[i];
+		for (auto it1=mVertexList.begin(); it1!=mVertexList.end(); it1++) {
+			Vertex* curVertex = *it1;
 			const Eigen::Vector3f& curPosition = curVertex->position();
-			//find all the outbound halfEdge starting from the current vertex
-			std::vector < HEdge* > outBoundHEdges;
-			outBoundHEdges.push_back(curVertex->halfEdge());
-			//This is a very clever way to find all the outbound edge of the current vertex 
-			while (outBoundHEdges.back()->twin()->next() != outBoundHEdges[0]) {
-				outBoundHEdges.push_back(outBoundHEdges.back()->twin()->next());
+			std::vector < HEdge* > outHEdges;
+			outHEdges.push_back(curVertex->halfEdge());
+			while (outHEdges.back()->twin()->next()!=outHEdges[0]) {
+				outHEdges.push_back(outHEdges.back()->twin()->next());
 			}
 			Eigen::Vector3f sumWeightedVectors(0,0,0);
 			double sumWeights = 0.0;
-			for(int j = 0; j < outBoundHEdges.size(); j++) {
-				//calculate cot(apha)
-				HEdge* outBoundHEdge = outBoundHEdges[j];
-				Eigen::Vector3f halfEdge11 = outBoundHEdge->end()->position() - outBoundHEdge->next()->end()->position();
-				Eigen::Vector3f halfEdge12 = outBoundHEdge->next()->next()->end()->position() - outBoundHEdge->next()->end()->position();
-				double cot1 = halfEdge11.dot(halfEdge12) / halfEdge11.cross(halfEdge12).norm();
-				
-				//calculate cot(beta)
-				HEdge* inHEdge = outBoundHEdge->twin();
-				Eigen::Vector3f halfEdge21 = inHEdge->end()->position() - inHEdge->next()->end()->position();
-				Eigen::Vector3f halfEdge22 = inHEdge->next()->next()->end()->position() - inHEdge->next()->end()->position();
-				double cot2 = halfEdge21.dot(halfEdge22) / halfEdge21.cross(halfEdge22).norm();
-				sumWeights += (cot1 + cot2) / 2;
-				sumWeightedVectors += ((cot1 + cot2) / 2) * (outBoundHEdge->end()->position());
+			for (auto it2=outHEdges.begin(); it2!=outHEdges.end(); it2++) {
+				HEdge* outHEdge = *it2;
+				Eigen::Vector3f HEdge11 = outHEdge->end()->position() - outHEdge->next()->end()->position();
+				Eigen::Vector3f HEdge12 = outHEdge->next()->next()->end()->position() - outHEdge->next()->end()->position();
+				double cotangent1 = HEdge11.dot(HEdge12) / HEdge11.cross(HEdge12).norm();
+				HEdge* inHEdge = outHEdge->twin();
+				Eigen::Vector3f HEdge21 = inHEdge->end()->position() - inHEdge->next()->end()->position();
+				Eigen::Vector3f HEdge22 = inHEdge->next()->next()->end()->position() - inHEdge->next()->end()->position();
+				double cotangent2 = HEdge21.dot(HEdge22) / HEdge21.cross(HEdge22).norm();
+				sumWeights += (cotangent1 + cotangent2) / 2;
+				sumWeightedVectors += ((cotangent1 + cotangent2) / 2) * (outHEdge->end()->position());
 			}
 			Eigen::Vector3f laplacian = sumWeightedVectors / sumWeights - curPosition;
 			curVertex->setPosition(curPosition + lambda * laplacian);
 		}
-
 
 	} else {
 		/**********************************************/
@@ -651,22 +713,20 @@ void Mesh::explicitSmooth(bool cotangentWeights) {
 		/* Step 2: Implement the uniform weighting 
 		/* scheme for explicit mesh smoothing.
 		/**********************************************/
-		int nv = mVertexList.size();
-		for(int i = 0; i < nv; i++) {
-			Vertex* curVertex = mVertexList[i];
+
+		for (auto it1=mVertexList.begin(); it1!=mVertexList.end(); it1++) {
+			Vertex* curVertex = *it1;
 			const Eigen::Vector3f& curPosition = curVertex->position();
-			std::vector < HEdge* > outBoundHEdges;
-			outBoundHEdges.push_back(curVertex->halfEdge());
-			while (outBoundHEdges.back()->twin()->next()!=outBoundHEdges[0]) {
-				outBoundHEdges.push_back(outBoundHEdges.back()->twin()->next());
+			std::vector < HEdge* > outHEdges;
+			outHEdges.push_back(curVertex->halfEdge());
+			while (outHEdges.back()->twin()->next()!=outHEdges[0]) {
+				outHEdges.push_back(outHEdges.back()->twin()->next());
 			}
 			Eigen::Vector3f sumVectors(0,0,0);
-			for(int j = 0; j < outBoundHEdges.size(); j++) {
-				HEdge* outBoundHEdge = outBoundHEdges[j];
-				sumVectors += outBoundHEdge->end()->position();
+			for (auto it2=outHEdges.begin(); it2!=outHEdges.end(); it2++) {
+				sumVectors += (*it2)->end()->position();
 			}
-			//For uniform weighting, just the average value of all the neighbor points
-			Eigen::Vector3f laplacian = sumVectors / outBoundHEdges.size() - curPosition;
+			Eigen::Vector3f laplacian = sumVectors / outHEdges.size() - curPosition;
 			curVertex->setPosition(curPosition + lambda * laplacian);
 		}
 	}
@@ -705,10 +765,9 @@ void Mesh::implicitSmooth(bool cotangentWeights) {
 		/* method.
 		/* Hint: https://en.wikipedia.org/wiki/Biconjugate_gradient_method
 		/**********************************************/
-		//Solve the linear system by biconjugate gradient method
 		Eigen::VectorXf r = b - A * x;
 		Eigen::VectorXf p = r;
-        int k;
+		int k;
 		for (k = 0; k <= maxIterations; k++) {
 			double alpha = r.norm() * r.norm() / (p.adjoint() * A * p);
 			Eigen::VectorXf nx = x;
@@ -822,6 +881,7 @@ void Mesh::implicitSmooth(bool cotangentWeights) {
 			curVertex->setPosition(newPosition);
 		}
 
+
 	} else {
 		/**********************************************/
 		/*          Insert your code here.            */
@@ -888,7 +948,6 @@ void Mesh::implicitSmooth(bool cotangentWeights) {
 			}
 			curVertex->setPosition(newPosition);
 		}
-		
 	}
 
 	/*====== Programming Assignment 1 ======*/
